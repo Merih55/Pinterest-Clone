@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-  <div class="container-fluid m-0 p-0 vh-100">
+  <div class="container-fluid m-0 p-0">
+    <div class="container-fluid position-relative vh-100 m-0 p-0 ">
     <!-- Navbar -->
-    <nav class="navbar py-3 navbar-expand-lg" id="top">
+    <nav class="navbar py-3 pb-240 navbar-expand-lg" id="top">
         <div class="container-fluid">
           <a class="navbar-brand d-flex align-items-center ms-3" href="#"><img src="img/logo_icon.png" width="32" height="32" alt="logo"><h1 class="text-danger m-0  ms-1 fs-5 logo_letter_spacing fw-semibold">Pinterest</h1></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,16 +97,15 @@
 
 
     <!-- TOP -->
-    <div class="container-fluid pt-140 position-relative vh-100  text-center">
-      <div class="fs-60 text-black fw-semibold position-absolute start-50 translate-middle-x ">
-        <h1 class="text-black text-center fs-60" >Sıradaki fikri bulun</h1>
+    
+      <div class="fs-60 text-black fw-semibold position-absolute start-50 translate-middle-x text-center">
+        <h1 class="text-black fs-60" >Sıradaki fikri bulun</h1>
         <p class="text text-warning">hafta içi akşam yemeği fikri</p>
         <p class="text text-success">ev dekorasyonu fikri</p>
         <p class="text text-primary">yeni giyim stili</p>
         <p class="text text-success">bahçecilik fikri</p>
       </div>
-    
-
+  
       <div class="column">
         <div class="d-flex justify-content-center">
           <div class="resim"><img src="img/resim1.jpg" alt=""></div>
@@ -128,14 +128,28 @@
           <div class="resim"><img src="img/resim7.jpg" alt=""></div>
         </div>
       </div>
-    </div>
-      <div class="gradient position-sticky"></div>
-      <!-- Top-Bottom-Text -->
-      <a href="#search" class="text-decoration-none text-black">
-        <div class="bottom-text text-center fw-semibold position-sticky bottom-0">
-        <p class="pt-3"> Bu, şu şekilde işler <i class="fa-solid fa-chevron-down"></i></p>
+      <div class="column">
+        <div class="d-flex justify-content-center">
+          <div class="resim"><img src="img/resim8.jpg" alt=""></div>
+          <div class="resim"><img src="img/resim2.jpg" alt=""></div>
+          <div class="resim"><img src="img/resim3.jpg" alt=""></div>
+          <div class="resim"><img src="img/resin4.jpg" alt=""></div>
+          <div class="resim"><img src="img/resim5.jpg" alt=""></div>
+          <div class="resim"><img src="img/resim6.jpg" alt=""></div>
+          <div class="resim"><img src="img/resim7.jpg" alt=""></div>
         </div>
-      </a>
+        <div class="gradient position-absolute bottom-0 w-100 h-25"></div>
+        <!-- Top-Bottom-Text -->
+        <a href="#search" class="text-decoration-none text-black">
+          <div class="bottom-text text-center fw-semibold position-absolute bottom-0 w-100 m-0 p-0">
+          <p class="pt-3"> Bu, şu şekilde işler <i class="fa-solid fa-chevron-down"></i></p>
+          </div>
+        </a>
+      </div>
+      </div>
+
+
+
     <!-- *************************************TOP************************************* -->
     <!-- Search -->
   <div class="search vh-100 row m-0 p-0" id="search">
@@ -156,13 +170,15 @@
       <p class="w-75 m-auto fs-3">En beğendiğiniz fikirlere daha sonra geri dönmek için kaydedin.</p>
       <button class="btn rounded-5 fw-bold m-0 p-0">Keşfet</button>
     </div>
-    <div class="col-lg-6   text-center pt-2 position-relative text-white">
+    <div class="col-lg-6   text-center text-white d-flex align-items-center ">
+      <div class="position-relative h-75 w-75">
       <div class="position-absolute start-0 mt-5"><img  src="img/save-1.png" width="400" height="420" alt=""><p class="position-absolute top-0 mt-5 ms-4 fs-60 text-start fw-semibold">Aşk merdiveni ev temaları</p></div>
       <div class="position-absolute end-0 me-5 mt-5"><img  src="img/save-2.png" width="223" height="235" alt=""><p class="position-absolute bottom-0 mt-5 ms-4 fs-3 text-start fw-semibold">İskandinav yatak odam</p></div>
-      <div class="position-absolute" style="right: 20%; top: 45%;"><img  src="img/save-3.png" width="165" height="173" alt=""><p class="position-absolute bottom-0 mt-5 ms-4 fs-5 text-start fw-semibold">Hayallerimin güvertesi</p></div>
+      <div class="position-absolute" style="right: 15%; top: 45%;"><img  src="img/save-3.png" width="165" height="173" alt=""><p class="position-absolute bottom-0 mt-5 ms-4 fs-5 text-start fw-semibold">Hayallerimin güvertesi</p></div>
       <div class="position-absolute" style="bottom: -40px; left: 20%;"><img  src="img/save-4.png" width="223" height="235" alt=""><p class="position-absolute top-0 mt-5 ms-4 fs-2 text-start fw-semibold">Stil dolu içecek servisi</p></div>
       <div class="position-absolute" style="bottom: -60px; right: 15%; "><img src="img/save-5.png" width="223" height="235" alt=""><p class="position-absolute bottom-0 mt-5 ms-4 fs-2 text-start fw-semibold">Yeni Banyomuz</p></div>
     </div>
+  </div>
   </div>
   <!-- ****************************************Save**************************************** -->
   <!-- Shop -->

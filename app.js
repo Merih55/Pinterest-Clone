@@ -202,6 +202,3 @@ document.addEventListener("DOMContentLoaded", function () {
 );
 });
 
-
-
-

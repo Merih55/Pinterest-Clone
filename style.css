@@ -43,8 +43,8 @@ ul li a:hover{
 
 /* Top-Text */
 /* Navbar ve Text arasına boşluk eklemek için(bootstrap değeri yetersiz oldugu için) */
-.pt-140{
-    padding-top: 140px;
+.pb-240{
+    padding-bottom: 240px !important;
 }
 /* Yazıyı büyütmek için (bootstrap değeri yetersiz oldugu için) */
 .fs-60{
@@ -123,8 +123,6 @@ ul li a:hover{
     background-color: #fffd92;
 }
 .gradient{
-    bottom: 45px;
-    height: 60px;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8016456582633054) 25%, rgba(255,255,255,0.5047268907563025) 50%, rgba(255,255,255,0.25262605042016806) 75%, rgba(255,255,255,0) 100%);
 }
