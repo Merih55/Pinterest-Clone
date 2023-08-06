@@ -1,0 +1,83 @@
+<div class="container-fluid position-relative vh-100 m-0 p-0 ">
+    <!-- Navbar -->
+    <nav class="navbar py-3 pb-240 navbar-expand-lg" id="top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center ms-3" href="#"><img src="static/img/logo_icon.png" width="32" height="32" alt="logo"><h1 class="text-danger m-0  ms-1 fs-5 logo_letter_spacing fw-semibold">Pinterest</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav fw-semibold">
+              <li class="nav-item">
+                <a class="nav-link text-black" aria-current="page" href="#">Hakkında</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a class="nav-link text-black " href="#">İş Dünyası</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a class="nav-link text-black" href="#">Blog</a>
+              </li>
+            </ul>
+            <button type="button" id="open-login" class="btn btn-danger ms-lg-4 fw-semibold rounded-5">Oturum Aç</button>
+            <button type="button" id="open-register" class="btn btn-secondary text-black text-opacity-100 ms-lg-1 fw-semibold rounded-5">Kaydol</button>
+          </div>
+        </div>
+      </nav>
+      <!-- *****************************************Navbar***************************************** -->
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      
+      <div class="bottom-signup text-center position-relative m-auto">
+        <div class="logo py-4">
+          <img src="static/img/logo_icon.png" width="35px" height="35px" alt="">
+        </div>
+        <div class="bottom-signup-text text-center text-black">
+          <p class="fs-2 fw-semibold mb-0">Pinterest'e Hoş Geldiniz</p>
+          <button type="button" class="btn-close position-absolute top-0 end-0" aria-label="Close"></button>
+        </div>
+  
+        <!-- Kayıt Ekranı -->
+          <div class="top-register text-black" id="top-register">
+              <form method="POST" class="text-start w-50 m-auto">
+              {% csrf_token %}
+                <label for="">E-posta</label>
+                <input type="email" name="email" id="" class="form-control rounded-4 p-2">
+                <label for="">Parola</label>
+                <input type="password" name="sifre" id="" class="form-control rounded-4 p-2">
+                <label for="">Doğum Tarihi</label>
+                <input type="date" name="dogumtarihi" id="" class="form-control rounded-4 p-2">
+                <input type="submit" value="Devam Et" class="btn btn-danger w-100 my-2 rounded-5">
+                <p class="text-uppercase fw-bold text-center my-0">Veya</p>
+                <input type="submit" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
+              </form>
+          </div>
+
+          <!-- Giriş Ekranı -->
+          <div class="top-login text-black" id="top-login">
+            <form method="POST" class="text-start w-50 m-auto">
+              <label for="">E-posta</label>
+              <input type="email" name="email" id="" class="form-control rounded-4 p-2">
+              <label for="">Parola</label>
+              <input type="password" name="sifre" id="" class="form-control rounded-4 p-2">
+              <input type="submit" value="Oturum Aç" class="btn btn-danger w-100 my-2 rounded-5">
+              <p class="text-uppercase fw-bold text-center my-0">Veya</p>
+              <input type="submit" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
+            </form>
+        </div>
+        <div class="terms-of-service my-2 w-50 m-auto text-center text-opacity-50 text-black my-2">
+          <p class="">Devam ederek Pinterest'in <a href="">Hizmet Şartları </a> koşullarını kabul etmiş ve <a href="">Gizlilik Politikası</a>  metnini okuduğunuzu onaylamış olursunuz. <a href="">Veri toplama bildirimi.</a></p>
+        </div>
+
+        <!-- Giriş Yap Butonu -->
+        <div class="top-signup-login w-50 m-auto text-center text-black text-opacity-50 pb-2">
+          <p id="top-login-text">Zaten Üyemisiniz ? <a href="#" id="top-login-text">Oturum Aç</a></p>
+        </div>
+        
+        <!-- Kayıt Ol Butonu -->
+        <div class="top-signup-login w-50 m-auto text-center text-black text-opacity-50 pb-2">
+          <p><a href="#" id="top-register-text">Hala Pinterest'te değil misiniz? Kaydolun</a></p>
+        </div>
+    </div>
+    </div>
+  </div>
