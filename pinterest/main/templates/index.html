@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="static/style.css">
   </head>
 <body>
+  {% if messages %}
+  {% for mesaj in messages %}
+      <div class="alert alert-{{mesaj.tags}} text-center">
+          {{mesaj}}
+      </div>
+  {% endfor %}
+  {% endif %}
+
 <div class="container-fluid m-0 p-0">
       {% include "includes/_navbar.html" %}
 
@@ -22,8 +30,11 @@
           <p class="text text-primary">yeni giyim stili</p>
           <p class="text text-success">bahçecilik fikri</p>
         </div>
-    
+        
+
+
         <div class="column">
+
           <div class="d-flex justify-content-center">
             <div class="resim"><img src="static/img/resim1.jpg" alt=""></div>
             <div class="resim"><img src="static/img/resim2.jpg" alt=""></div>

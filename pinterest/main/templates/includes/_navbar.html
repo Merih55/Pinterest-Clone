@@ -21,13 +21,15 @@
             <button type="button" id="open-login" class="btn btn-danger ms-lg-4 fw-semibold rounded-5">Oturum Aç</button>
             <button type="button" id="open-register" class="btn btn-secondary text-black text-opacity-100 ms-lg-1 fw-semibold rounded-5">Kaydol</button>
           </div>
+
         </div>
       </nav>
       <!-- *****************************************Navbar***************************************** -->
+
   <!-- Modal -->
   <div id="myModal" class="modal">
     <div class="modal-content">
-      
+
       <div class="bottom-signup text-center position-relative m-auto">
         <div class="logo py-4">
           <img src="static/img/logo_icon.png" width="35px" height="35px" alt="">
@@ -44,9 +46,11 @@
                 <label for="">E-posta</label>
                 <input type="email" name="email" id="" class="form-control rounded-4 p-2">
                 <label for="">Parola</label>
-                <input type="password" name="password1" id="" class="form-control rounded-4 p-2">
+                <input type="password" name="sifre1" id="" class="form-control rounded-4 p-2">
                 <label for="">Parola Tekrar</label>
-                <input type="password" name="password2" id="" class="form-control rounded-4 p-2">
+                <input type="password" name="sifre2" id="" class="form-control rounded-4 p-2">
+                <label for="">Doğum Tarihi</label>
+                <input type="date" name="dogumtarihi" id="" class="form-control rounded-4 p-2">
                 <input type="submit" value="Devam Et" class="btn btn-danger w-100 my-2 rounded-5">
                 <p class="text-uppercase fw-bold text-center my-0">Veya</p>
                 <input type="submit" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
@@ -56,13 +60,14 @@
           <!-- Giriş Ekranı -->
           <div class="top-login text-black" id="top-login">
             <form method="POST" class="text-start w-50 m-auto">
+            {% csrf_token %}
               <label for="">E-posta</label>
               <input type="email" name="email" id="" class="form-control rounded-4 p-2">
               <label for="">Parola</label>
               <input type="password" name="sifre" id="" class="form-control rounded-4 p-2">
               <input type="submit" value="Oturum Aç" class="btn btn-danger w-100 my-2 rounded-5">
               <p class="text-uppercase fw-bold text-center my-0">Veya</p>
-              <input type="submit" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
+              <input type="" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
             </form>
         </div>
         <div class="terms-of-service my-2 w-50 m-auto text-center text-opacity-50 text-black my-2">
