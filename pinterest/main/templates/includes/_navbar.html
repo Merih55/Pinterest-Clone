@@ -41,19 +41,20 @@
   
         <!-- Kayıt Ekranı -->
           <div class="top-register text-black" id="top-register">
+
               <form method="POST" class="text-start w-50 m-auto">
               {% csrf_token %}
-                <label for="">E-posta</label>
+                <label for="">Kullanıcı Adı</label>
+                <input type="text" name="kullanici" id="" class="form-control rounded-4 p-2">
+                <label for="">Email</label>
                 <input type="email" name="email" id="" class="form-control rounded-4 p-2">
                 <label for="">Parola</label>
                 <input type="password" name="sifre1" id="" class="form-control rounded-4 p-2">
                 <label for="">Parola Tekrar</label>
                 <input type="password" name="sifre2" id="" class="form-control rounded-4 p-2">
-                <label for="">Doğum Tarihi</label>
-                <input type="date" name="dogumtarihi" id="" class="form-control rounded-4 p-2">
-                <input type="submit" value="Devam Et" class="btn btn-danger w-100 my-2 rounded-5">
+                <input type="submit" value="Devam Et"  class="btn btn-danger w-100 my-2 rounded-5">
                 <p class="text-uppercase fw-bold text-center my-0">Veya</p>
-                <input type="submit" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
+                <input type="" value="Facebook ile Devam Et" class="btn btn-primary my-2 w-100 rounded-5">
               </form>
           </div>
 
@@ -61,8 +62,8 @@
           <div class="top-login text-black" id="top-login">
             <form method="POST" class="text-start w-50 m-auto">
             {% csrf_token %}
-              <label for="">E-posta</label>
-              <input type="email" name="email" id="" class="form-control rounded-4 p-2">
+              <label for="">Kullanıcı Adı</label>
+              <input type="text" name="kullanici" id="" class="form-control rounded-4 p-2">
               <label for="">Parola</label>
               <input type="password" name="sifre" id="" class="form-control rounded-4 p-2">
               <input type="submit" value="Oturum Aç" class="btn btn-danger w-100 my-2 rounded-5">
