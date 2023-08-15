@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from main.views import *
+from secondMain.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
+    path('secondMain',secondMain,name="secondMain"),
     
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

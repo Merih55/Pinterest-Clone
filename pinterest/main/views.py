@@ -43,7 +43,7 @@ def index(request):
             if user is not None:
                 login(request, user)
                 messages.success(request,'Giriş Yapıldı')
-                return redirect('deneme')
+                return redirect('secondMain')
             else:
                 messages.error(request,'Kullanıcı Adı veya Şifre Hatalı')
                 return redirect('index')

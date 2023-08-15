@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+}
+a{
+    color: black !important;
+    font-weight: 600 !important;
+
+}
+.logo:hover{
+    background-color: gray;
+}
+.navbar p{
+    padding: 4px;
+    margin: 0;
+}
+.dropdown-item:hover{
+background-color: #e9e9e9;
+}
+.arama{
+    width: 80%;
+}
+.resimler{
+    padding: 0 70px;
+    columns: 7;
+    column-gap: 20px;
+}
+.resimler .box{
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+.resimler .box img{
+    width: 100%;
+    border-radius: 15px;
+}
