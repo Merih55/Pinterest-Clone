@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container-fluid bg-secondary-subtle vh-100 pt-5">
+    <div class="bg-white rounded-4 w-50 m-auto">
+        <form method="POST" class="p-5 position-relative">
+              {% csrf_token %}
+                <label for="">Başlık</label>
+                <input type="text" name="baslik" id="" placeholder="Başlığınızı Ekleyin" class="form-control rounded-4 p-2 ">
+                <label for="">Açıklama</label>
+                <textarea class="form-control rounded-4 p-2" name="aciklama" id="" cols="30" rows="10" placeholder="Pininizin ne hakkında olduğunu söyleyin"></textarea>
+                <label for="">Resim</label>
+                <input type="file" name="resim" id="" class="form-control rounded-4 p-2">
+                <label for="">Kategori</label>
+                <select class="form-control rounded-4 p-2" name="kategori" id="">
+                    <option selected>Kategori Seçiniz</option>
+                    <option value="1">Manzara</option>
+                    <option value="2">Doğa</option>
+                    <option value="3">Teknoloji</option>
+                </select>
+                <input type="submit" value="Kaydet" name="action" class="btn btn-danger  position-absolute top-0 end-0 m-2 rounded-3 w-25">
+        </form>
+    </div>
+</div>
+{% endblock content %}

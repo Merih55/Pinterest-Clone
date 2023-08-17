@@ -25,7 +25,6 @@ from secondMain.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
-    path('secondMain',secondMain,name="secondMain"),
-    
+    path('main/',include('secondMain.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

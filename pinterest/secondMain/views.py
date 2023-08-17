@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth import logout
 # Create your views here.
-def secondMain(request):
+def anasayfa(request):
 
-    return render(request,'secondMain.html')
+    return render(request,'main.html')
+
+def created(request):
+
+    return render(request,'olustur.html')
