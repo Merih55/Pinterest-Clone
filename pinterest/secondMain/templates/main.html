@@ -17,28 +17,9 @@
 {% block content %}
 
     <div class="container-fluid resimler">
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/2.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/2.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/4.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/2.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/4.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/2.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/2.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/1.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/3.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/4.jpg" alt=""></div>
-      <div class="box"><img src="/static/secondmain-img/4.jpg" alt=""></div>
+      {% for i in resimler %}
+            <div class="box"><img src="{{i.resim.url}}" alt=""></div>
+      {% endfor %}
     </div>
 
 

@@ -3,20 +3,32 @@
 {% block content %}
 <div class="container-fluid bg-secondary-subtle vh-100 pt-5">
     <div class="bg-white rounded-4 w-50 m-auto">
-        <form method="POST" class="p-5 position-relative">
+        <form method="POST" class="p-5 position-relative" enctype="multipart/form-data">
               {% csrf_token %}
                 <label for="">Başlık</label>
                 <input type="text" name="baslik" id="" placeholder="Başlığınızı Ekleyin" class="form-control rounded-4 p-2 ">
                 <label for="">Açıklama</label>
                 <textarea class="form-control rounded-4 p-2" name="aciklama" id="" cols="30" rows="10" placeholder="Pininizin ne hakkında olduğunu söyleyin"></textarea>
                 <label for="">Resim</label>
-                <input type="file" name="resim" id="" class="form-control rounded-4 p-2">
+                <input type="file" name="resim" class="form-control rounded-4 p-2">
                 <label for="">Kategori</label>
-                <select class="form-control rounded-4 p-2" name="kategori" id="">
-                    <option selected>Kategori Seçiniz</option>
-                    <option value="1">Manzara</option>
-                    <option value="2">Doğa</option>
-                    <option value="3">Teknoloji</option>
+                <select class="form-select rounded-4 p-2" name="kategori" multiple aria-label="Multiple select example">
+                    <option value="1">Mimari</option>
+                    <option value="2">Hayvan</option>
+                    <option value="3">Sanat</option>
+                    <option value="4">Güneş</option>
+                    <option value="5">Sahil</option>
+                    <option value="6">Deniz</option>
+                    <option value="7">Araba</option>
+                    <option value="8">Doğa</option>
+                    <option value="9">Teknoloji</option>
+                    <option value="10">Sinema</option>
+                    <option value="11">Film Yıldızı</option>
+                    <option value="12">İnsan</option>
+                    <option value="13">Gökyüzü</option>
+                    <option value="14">Doğa</option>
+                    <option value="15">Manzara</option>
+                    <option value="16">Film</option>          
                 </select>
                 <input type="submit" value="Kaydet" name="action" class="btn btn-danger  position-absolute top-0 end-0 m-2 rounded-3 w-25">
         </form>
