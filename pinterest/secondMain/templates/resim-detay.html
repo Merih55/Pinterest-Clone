@@ -1,5 +1,11 @@
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+{% extends "main.html" %}
+
+{% block title %}
+    <title>{{Resimler.baslik}}</title>
+{% endblock title %}
+
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container-fluid m-2">
           <a class="navbar-brand m-0" href="/"><img src="/static/secondmain-img/logo_icon.png" class="logo rounded-5 p-2" width="40" height="40" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,9 +14,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2  mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link bg-black text-white rounded-5" aria-current="page" href="/main/"><p>Ana Sayfa</p> </a>
+                <a class="nav-link" aria-current="page" href="/main/"><p>Ana Sayfa</p> </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a class="nav-link" href="/main/olustur/" aria-current="page">
                   <p>Oluştur</p>
                 </a>
@@ -35,5 +41,25 @@
             </div>
           </div>
         </div>
-      </nav>
-    <!-- **************Navbar****************** -->
+    </nav>
+{% endblock navbar %}
+
+
+{% block content %}
+<div class="container-fluid bg-white pt-5">
+    <div class="row m-auto w-50 shadow rounded-5">
+        <div class="col-6 m-0 p-0 ">
+            <img src="{{Resimler.resim.url}}" width="100%" alt="" class="rounded-start-5">
+        </div>
+        <div class="col-6">
+            <p class="pt-5">{{Resimler.baslik}}</p>
+        </div>
+    </div>
+</div>
+<h1 class="text-center my-3 fs-5">Bunun gibi daha fazlası</h1>
+<div class="container-fluid bg-white resimler">
+    {% for i in BenzerResim %}
+    <a href="{% url 'detay' i.id %}"><div class="box"><img  src="{{i.resim.url}}" alt=""></div></a>
+    {% endfor %}
+</div>
+{% endblock content %}

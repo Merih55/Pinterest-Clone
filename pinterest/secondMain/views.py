@@ -14,11 +14,17 @@ def created(request):
         aciklama = request.POST['aciklama']
         resim = request.FILES['resim']
         kategori_id = request.POST['kategori']
-
         kategori = Kategori.objects.get(pk=kategori_id)
-
         resim = Resim(baslik=baslik, aciklama=aciklama, resim=resim)
-
         resim.save()
         resim.kategori.set([kategori])
     return render(request,'olustur.html')
+
+def detay(request, ResimDetayId):
+    Resimler = Resim.objects.get(id = ResimDetayId)
+    BenzerResim = Resim.objects.all
+    context = {
+        'Resimler':Resimler,
+        'BenzerResim':BenzerResim,
+    }
+    return render(request,'resim-detay.html',context)
