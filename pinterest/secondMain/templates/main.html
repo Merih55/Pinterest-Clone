@@ -22,7 +22,12 @@
 
     <div class="container-fluid resimler">
       {% for i in resimler %}
-            <a href="{% url 'detay' i.id %}"><div class="box"><img  src="{{i.resim.url}}" alt=""></div></a>
+            <a href="{% url 'detay' i.id %}">
+              <div class="box position-relative">
+                  <img  src="{{i.resim.url}}" alt="">
+                  <div class="overlay"></div>
+              </div>
+            </a>
       {% endfor %}
     </div>
 

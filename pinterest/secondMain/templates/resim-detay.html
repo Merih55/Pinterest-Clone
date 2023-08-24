@@ -59,7 +59,13 @@
 <h1 class="text-center my-3 fs-5">Bunun gibi daha fazlası</h1>
 <div class="container-fluid bg-white resimler">
     {% for i in BenzerResim %}
-    <a href="{% url 'detay' i.id %}"><div class="box"><img  src="{{i.resim.url}}" alt=""></div></a>
+    <a href="{% url 'detay' i.id %}">
+    <div class="box position-relative">
+    <img  src="{{i.resim.url}}" alt="">
+    <div class="overlay"></div>
+    </div>
+    </a>
+    
     {% endfor %}
 </div>
 {% endblock content %}
