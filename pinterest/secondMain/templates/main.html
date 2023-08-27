@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -20,23 +21,28 @@
 
 {% block content %}
 
-    <div class="container-fluid resimler">
-      {% for i in resimler %}
-            <a href="{% url 'detay' i.id %}">
-              <div class="box position-relative">
-                  <img  src="{{i.resim.url}}" alt="">
-                  <div class="overlay"></div>
-              </div>
-            </a>
-      {% endfor %}
-    </div>
+<div class="container-fluid resimler">
+  {% for i in resimler %}
+      <div class="box position-relative">
+          <a href="{% url 'detay' i.id %}">
+              <img src="{{ i.resim.url }}" alt="">
+              <div class="overlay z-0"></div>
+          </a>
+          <button class="kaydet btn btn-danger position-absolute top-0 end-0 m-2 rounded-3 d-none z-1" data-url="{{ i.resim.url }}" data-filename="{{ i.baslik }}">
+              Kaydet
+          </button>
+      </div>
+  {% endfor %}
+</div>
+
 
 
 {% endblock content %}
+
 <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/db7589f27b.js" crossorigin="anonymous"></script>
-
+    <script src="/static/secondmain-app.js"></script>
   </body>
 </html>

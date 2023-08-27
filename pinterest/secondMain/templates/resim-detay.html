@@ -59,10 +59,13 @@
 <h1 class="text-center my-3 fs-5">Bunun gibi daha fazlası</h1>
 <div class="container-fluid bg-white resimler">
     {% for i in BenzerResim %}
-    <a href="{% url 'detay' i.id %}">
     <div class="box position-relative">
+    <a href="{% url 'detay' i.id %}">
     <img  src="{{i.resim.url}}" alt="">
     <div class="overlay"></div>
+              <button class="kaydet btn btn-danger position-absolute top-0 end-0 m-2 rounded-3 d-none z-1" data-url="{{ i.resim.url }}" data-filename="{{ i.baslik }}">
+              Kaydet
+          </button>
     </div>
     </a>
     
