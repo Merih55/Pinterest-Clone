@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -9,6 +10,7 @@ class Kategori(models.Model):
         return self.isim
 
 class Resim(models.Model):
+    kullanici = models.ForeignKey(User, on_delete=models.CASCADE, null = True)
     baslik = models.TextField(max_length=250, verbose_name='Resim Başlığı')
     kategori = models.ManyToManyField(Kategori)
     aciklama = models.TextField(max_length=2000, blank=True, verbose_name='Resim Açıklaması')
