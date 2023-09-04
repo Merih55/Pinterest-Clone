@@ -68,3 +68,7 @@ def detay(request, ResimDetayId):
         'search':search 
     }
     return render(request,'resim-detay.html',context)
+
+def profil(request):
+
+    return render(request,'profil.html')
