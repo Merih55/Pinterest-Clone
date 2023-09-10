@@ -17,6 +17,7 @@ def anasayfa(request):
         'resimler':resimler,
         'search':search 
     }
+
     return render(request,'main.html',context)
 
 def created(request):
@@ -70,5 +71,9 @@ def detay(request, ResimDetayId):
     return render(request,'resim-detay.html',context)
 
 def profil(request):
-
-    return render(request,'profil.html')
+    # Giriş yapan kullanıcının oluşturduğu resimleri görüntülemek için
+    resimler = Resim.objects.filter(kullanici=request.user)
+    context = {
+        'resimler':resimler,
+        }
+    return render(request,'profil.html',context)
